@@ -18,7 +18,7 @@ app.post("/register",(req,res)=>{
 
     }
     const len = password.length;
-    if(len<8 || len>16){
+    if(len<8 || len>=16){
         return res.status(400).json({message:`Password length should be greater then 8 or less than or equal to 16`})
     }
     return res.status(200).json({message:`Registration Success!`})
